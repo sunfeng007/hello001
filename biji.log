@@ -1,0 +1,62 @@
+对用到的知识点虽用不着一定要看源码的地步，但是最好要懂原理，比如图片加载一定要知道二级缓存，一些常见的缓存算法
+
+
+我们所接受过的大学工科教育，都是一上来先学基础理论，最后再来一个金工实习。一开始不知道为什么而学，学不进去，荒废了基础，等到金工实习的时候，又发现基础不牢，后悔不已。 考虑到传统教育方式的不足之处，笔者在组织本系列文章的时候是先讲入门实例，进而学习 Gradle 和 Groovy 基础原理，最后学习进阶实例。
+
+
+常用工具：
+　1、XAppDbg
+　　XAppDbg是一个可以在运行中改变代码中参数的一个应用开发工具。这个工具可以为你省下大量的时间，因为你不用为应用的每次小改变而重新编译运行你的程序。
+　　2、ChkBugReport
+　　这个工具可以快速地检查输出的Android错误报告。它从Android错误报告工具输出的大量文本文件中进行语义分析，然后解析成一个更具有可读性的文档，分析起来更加容易。ChkBugReport也是一个开源的项目。
+　　3、APKAnalyser
+　　这是一个静态、虚拟分析工具，你可以全面地概览应用的架构。可以用它来检查API参考文档，查看应用依赖还有反编译字节码。APKAnalyser是一个完整的开源工具链，它支持修改应用的二进制代码，你可以重新打包、安装、运行以及验证logcat的结果。
+　　4、AppXplore
+　　有了AppXplore工具，你可以浏览所有安装在你安卓设备上的应用，还可以剖析很多应用的细节——应用的版本、包名、证书、权限、签名、activities和很多设备上其它一般不可查看的信息。AppXplore在查看应用运行时占用内存大小，文件是否可移动到SD卡上时特别有用。同样，开发者可以用来测试并确保应用的质量。这样可以确保应用在manifest文件上显示合适的权限。
+　　5、Memory Analyzer(MAT)
+　　Eclipse上的Memory Analyzer是一个快速且功能丰富的Java堆分析工具，它可以帮助你找出内存泄露并减少内存的开销。使用Memory Analyzer可以分析数以百万的对象、多个堆转储(heap dump)，快速地统计保留下来的对象的多少，这样可以查看哪些对象阻止了垃圾收集器回收。最后运行一个报告自动报告导致泄露的可疑地方。
+　　6、Eclipse插件SQLiteManger
+　　这个插件可以帮助开发者在Eclipse上查看和修改sqlite数据库。
+　　7、Robotium
+　　Robotium是一个测试框架，它可以简单地为安卓应用写出一个强大且健壮的自动黑箱测试容器。有了Robotium，测试开发者可以支持多种安卓activity编写function、system和acceptance测试脚本。Robotium全支持Activity、Dialogs、Toasts、Menus以及Context Menus。
+　　8、ACRA
+　　ACRA是一个可以让安卓应用自动发出GoogleDoc格式崩溃报告的函数库。安卓开发者可以通过ACRA获取应用崩溃或者错误行为的数据。如果有一个崩溃发生，你的应用不会越过已有的系统崩溃提醒或者报告功能来添加用户提醒。如果使用Toast、状态提醒条或者直接对话框模式，这个“强制关闭”的对话框不会再显示，就算设备上原生系统的提醒功能开启也不能发送一个另外的报告。
+　　9、Android Layout Binder
+　　Android Layout Binder会将你安卓的XML布局文件转换成一系列的声明，绑定保存所有的人工输入。键入一个前缀，选择XML文件上要粘贴的范围，然后点击生成。选择“verbose”来找出所有被跳过的区域的原因。
+　　10、Spoon
+　　安卓设备空前膨胀的生态系统给测试应用带来了独特挑战。Spoon通过分配执行instrumentation测试和用更有意义的方法显示结果来简化这项任务。Spoon没有试着成为一个新的测试形式，它让目前的instrumentation测试更加有用。使用应用的APK和instrumentation APK，Spoon可以同时在多种设备上运行测试。一旦所有的测试完成，就会生成包括各种设备测试的详细信息的静态HTML摘要。
+　　11、Android Content Provider代码生成器
+　　你是否经常复制和粘贴一大堆代码来写一个ContentProvider?那么这个代码生成工具可以帮助你。
+　　12、AndroidKickStartR
+　　十秒内开始你的下一个安卓应用。AndroidKickstartR使用最流行的函数库帮助你快速地建立一个配置好的安卓应用。它为你建立和配置好项目给你，直接专注于代码吧!
+　　13、Android Holo颜色生成器
+　　这个Android Holo颜色生成器可以让你简单地为你的应用创建Android组件，如editext或者spinner，并且可以使用自己的颜色。它会生成所有9种必须的patch assets以及相关XML的drawables和styles文件，可以直接复制这些文件到你的项目中。
+　　14、ActionBar风格生成器
+　　这个ActionBar风格生成器可以让你轻松地创建一个简洁、有吸引力且无漏洞的自定义actionbar。它会生成所有9种必须的patch assets以及相关XML的drawables和styles文件，这些文件可以直接复制到你的项目中。
+　　15、Asset Studio
+　　Asset Studio可以让你快速简单地从已经存在的图片、剪贴画或者文本资源中生成图标。
+　　16、little eye labs
+　　little eye labs是安卓应用上的性能分析工具，它的产品已经改名字为“little eye”而不是之前叫的“littleEye appInsight”。保持我们产品目录的简洁，与我们在每一部分工作上专注于简洁的总体主题上保持一致。
+　　主要特性：
+为任何一个应用描出轮廓;
+录制和回放视频;
+前端和后台用法;
+CPU，内存和数据的消耗;
+手动或自动的堆转储;
+保存和分享。
+　　17、Droid Inspector
+　　Overdraw(透支)概念在安卓的世界里被认为是很重要的。在Google I/O大会上，很少有演讲强调了减少透支的重要性。这是(在我认识中最好的)第一个可以帮助我们容易地辨认出透支的工具。
+　　主要特性
+三维申查;
+找出透支;
+盒子模型;
+与DDMS结合;
+查看层次;
+后台/内容;
+WebGL;
+2D转3D转2D;
+　　·还有更多……
+　　18、Android Button Maker
+　　Android Button Maker是一个可以在线生成按钮代码的工具。Android API提供了XML文件定义的几何形状的Drawable资源，包括颜色、边界和梯度。这些按钮的生成是基于drawable形态的XML代码，这样可以比普通的png按钮加载得更快。你可以在设置面板上自定义按钮的属性，然后获取其源码。
+　　19、jsonschema2pojo
+　　用于生成Json架构上的POJO(Plain Old Java Object)类。这个小而强大的工具可以为你节省写POJO所用的时间。

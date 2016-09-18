@@ -1,0 +1,134 @@
+http://wiki.moretv.cn/wiki/pj/helios/微鲸助手
+HelMidSer_UdpSenter
+HeliosServerService
+MuiscPlayer
+MusicParser
+MobileTVInteractiveHelp
+MediaPlayerManager
+DBDefine.java
+
+
+ 1, 非法异常， 频繁发送播放
+## 2，跳进度 声音没有跳，
+## 3，自动播放第二首，onPlayStart 没有回调  ，index 
+ 4，偶先 widget 显示不出来，  喜马拉雅 考拉 很多列表
+## 5，正在播放，移动端发送TV端播放 ，无法播放。
+ 6,删除收藏
+ 
+## 7, ximalay  seek 回到之的进度  seek 完成回调
+ /mnt/usb/sda1/aa.mp3    aaa.mp3  ab.mp3
+
+ 1，分体出包
+2， W32H
+eclipse 自动补全
+urldecode
+
+4, 收藏 ，保存收藏 获取收藏
+5，喜马拉雅
+6，蜻蜓url 会失效的
+
+一直发送日志
+ 
+http://192.168.0.60:12321/?Action=fm_audio&param=%7B%22action%22%3A%22fm_audio%22%2C%22audios%22%3A%5B%5D%2C%22action_type%22%3A%22likelist%22%2C%22audio_index%22%3A0%7D
+
+http://192.168.0.60:12321?Action=fm_audio&param={"action":"fm_audio","audios":[],"unlike_list":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],"action_type":"unlike","audio_index":0}
+
+http://192.168.0.60:12321?Action=fm_audio&param={"action":"fm_audio","audios":[],"unlike_list":["123"],"action_type":"unlike","audio_index":0}
+
+I/MobileTVInteractiveHelp( 7175): onServer  {accept=*/*, accept-encoding=gzip, deflate, host=172.16.106.9:12321, cookie=theworld_client_none=none, http-client-ip=172.16.106.8, accept-language=zh-CN, remote-addr=172.16.106.8, user-agent=Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.2), connection=Keep-Alive}
+I/MobileTVInteractiveHelp( 7175): onServer  getParms key:Action value:fm_audio
+I/MobileTVInteractiveHelp( 7175): onServer  getParms key:audioid value:1000002522311","img_url":"\/mz\/images\/201605\/89036cef-4798-47cc-82c6-4ad131244ab6\/default.png","audio_source":"kaila","audio_type":"music","begin_time":""}
+I/MobileTVInteractiveHelp( 7175): onServer  getParms key:deviceid value:100000038549332
+
+
+I/MobileTVInteractiveHelp( 7175): onServer  getParms key:NanoHttpd.QUERY_STRING value:Action=fm_audio&param={%22action%22:%22fm_audio%22,%22audios%22:[{%22end_time%22:%22%22,%22singer_name%22:%22%E6%BC%AB%E7%94%BB%E5%88%86%E4%BA%AB%20%E7%AC%AC%E4%B8%80%E6%9C%9F%E5%88%86%E4%BA%AB%20-%20%E6%96%97%E7%A0%B4%E8%8B%8D%E7%A9%B9%E6%BC%AB%E7%94%BB%22,%22id%22:%221000002495632%22,%22category_name%22:%22%22,%22album_name%22:%22%E6%BC%AB%E7%94%BB%E5%88%86%E4%BA%AB%20-%20%E7%BB%B4%E4%BA%AE%22,%22audio_url%22:%22http:\/\/image.kaolafm.net\/mz\/filmchipsmp3_32\/201605\/7781acb7-c384-4900-93ed-599afd00f34f.mp3?appid=qenyx9107&deviceid=100000038549332&audioid=1000002495632%22,%22img_url%22:%22\/mz\/images\/201605\/89036cef-4798-47cc-82c6-4ad131244ab6\/default.png%22,%22audio_source%22:%22kaila%22,%22audio_type%22:%22music%22,%22begin_time%22:%22%22},{%22end_time%22:%22%22,%22singer_name%22:%22%E6%BC%AB%E7%94%BB%E5%88%86%E4%BA%AB%E7%AC%AC2%E6%9C%9F(%E5%A6%96%E7%A5%9E%E8%AE%B0)%22,%22id%22:%221000002509863%22,%22category_name%22:%22%22,%22album_name%22:%22%E6%BC%AB%E7%94%BB%E5%88%86%E4%BA%AB%20-%20%E7%BB%B4%E4%BA%AE%22,%22audio_url%22:%22http:\/\/image.kaolafm.net\/mz\/filmchipsmp3_32\/201605\/12100ef3-0d5f-4bf0-a71f-e27dd0e8384c.mp3?appid=qenyx9107&deviceid=100000038549332&audioid=1000002509863%22,%22img_url%22:%22\/mz\/images\/201605\/89036cef-4798-47cc-82c6-4ad131244ab6\/default.png%22,%22audio_source%22:%22kaila%22,%22audio_type%22:%22music%22,%22begin_time%22:%22%22},{%22end_time%22:%22%22,%22singer_name%22:%22%E6%BC%AB%E7%94%BB%E5%88%86%E4%BA%AB%20-%20%E7%AC%AC3%E6%9C%9F%EF%BC%88%E4%BB%99%E4%BE%A0%E4%B8%96%E7%95%8C%EF%BC%89%22,%22id%22:%221000002522311%22,%22category_name%22:%22%22,%22album_name%22:%22%E6%BC%AB%E7%94%BB%E5%88%86%E4%BA%AB%20-%20%E7%BB%B4%E4%BA%AE%22,%22audio_url%22:%22http:\/\/image.kaolafm.net\/mz\/filmchipsmp3_32\/201606\/156191b0-d508-4d7f-9031-352aabf02420.mp3?appid=qenyx9107&deviceid=100000038549332&audioid=1000002522311%22,%22img_url%22:%22\/mz\/images\/201605\/89036cef-4798-47cc-82c6-4ad131244ab6\/default.png%22,%22audio_source%22:%22kaila%22,%22audio_type%22:%22music%22,%22begin_time%22:%22%22}
+
+
+
+I/MobileTVInteractiveHelp( 7175): onServer  getParms key:param value:{"action":"fm_audio","audios":[{"end_time":"","singer_name":"婕敾鍒嗕韩 绗竴鏈熷垎浜- 鏂楃牬鑻嶇┕婕敾","id":"1000002495632","category_name":"","album_name":"婕敾鍒嗕韩 - 缁翠寒","audio_url":"http:\/\/image.kaolafm.net\/mz\/filmchipsmp3_32\/201605\/7781acb7-c384-4900-93ed-599afd00f34f.mp3?appid=qenyx9107
+I/MobileTVInteractiveHelp( 7175): onServer  end 
+
+\/mz\/images\/201605\/89036cef-4798-47cc-82c6-4ad131244ab6\/default.png
+{}
+
+{
+		"status":"200",
+        "action":"fm_audio",
+		"action_type":"startplay
+}
+
+
+{
+		"status":"200"
+}
+
+http://172.16.106.9:12321/?Action=fm_audio&param={%22action%22:%22fm_audio%22,%22audios%22:[{%22end_time%22:%22%22,%22singer_name%22:%22%E6%BC%AB%E7%94%BB%E5%88%86%E4%BA%AB%20%E7%AC%AC%E4%B8%80%E6%9C%9F%E5%88%86%E4%BA%AB%20-%20%E6%96%97%E7%A0%B4%E8%8B%8D%E7%A9%B9%E6%BC%AB%E7%94%BB%22,%22id%22:%221000002495632%22,%22category_name%22:%22%22,%22album_name%22:%22%E6%BC%AB%E7%94%BB%E5%88%86%E4%BA%AB%20-%20%E7%BB%B4%E4%BA%AE%22,%22audio_url%22:%22http:\/\/image.kaolafm.net\/mz\/filmchipsmp3_32\/201605\/7781acb7-c384-4900-93ed-599afd00f34f.mp3?appid=qenyx9107&deviceid=100000038549332&audioid=1000002495632%22,%22img_url%22:%22\/mz\/images\/201605\/89036cef-4798-47cc-82c6-4ad131244ab6\/default.png%22,%22audio_source%22:%22kaila%22,%22audio_type%22:%22music%22,%22begin_time%22:%22%22},{%22end_time%22:%22%22,%22singer_name%22:%22%E6%BC%AB%E7%94%BB%E5%88%86%E4%BA%AB%E7%AC%AC2%E6%9C%9F(%E5%A6%96%E7%A5%9E%E8%AE%B0)%22,%22id%22:%221000002509863%22,%22category_name%22:%22%22,%22album_name%22:%22%E6%BC%AB%E7%94%BB%E5%88%86%E4%BA%AB%20-%20%E7%BB%B4%E4%BA%AE%22,%22audio_url%22:%22http:\/\/image.kaolafm.net\/mz\/filmchipsmp3_32\/201605\/12100ef3-0d5f-4bf0-a71f-e27dd0e8384c.mp3?appid=qenyx9107&deviceid=100000038549332&audioid=1000002509863%22,%22img_url%22:%22\/mz\/images\/201605\/89036cef-4798-47cc-82c6-4ad131244ab6\/default.png%22,%22audio_source%22:%22kaila%22,%22audio_type%22:%22music%22,%22begin_time%22:%22%22},{%22end_time%22:%22%22,%22singer_name%22:%22%E6%BC%AB%E7%94%BB%E5%88%86%E4%BA%AB%20-%20%E7%AC%AC3%E6%9C%9F%EF%BC%88%E4%BB%99%E4%BE%A0%E4%B8%96%E7%95%8C%EF%BC%89%22,%22id%22:%221000002522311%22,%22category_name%22:%22%22,%22album_name%22:%22%E6%BC%AB%E7%94%BB%E5%88%86%E4%BA%AB%20-%20%E7%BB%B4%E4%BA%AE%22,%22audio_url%22:%22http:\/\/image.kaolafm.net\/mz\/filmchipsmp3_32\/201606\/156191b0-d508-4d7f-9031-352aabf02420.mp3?appid=qenyx9107&deviceid=100000038549332&audioid=1000002522311%22,%22img_url%22:%22\/mz\/images\/201605\/89036cef-4798-47cc-82c6-4ad131244ab6\/default.png%22,%22audio_source%22:%22kaila%22,%22audio_type%22:%22music%22,%22begin_time%22:%22%22}],%22action_type%22:%22startplay%22,%22audio_index%22:0}
+http://192.168.0.60:12321?Action=fm_audio&param={"action":"fm_audio","audios":[],"unlike_list":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],"action_type":"unlike","audio_index":0}
+http://192.168.0.52:12321/?
+Action=
+fm_audio&
+param={%22action%22:%22fm_audio%22,%22audios%22:[{%22end_time%22:%22%22,%22singer_name%22:%22%E6%BC%AB%E7%94%BB%E5%88%86%E4%BA%AB%20%E7%AC%AC%E4%B8%80%E6%9C%9F%E5%88%86%E4%BA%AB%20-%20%E6%96%97%E7%A0%B4%E8%8B%8D%E7%A9%B9%E6%BC%AB%E7%94%BB%22,%22id%22:%221000002495632%22,%22category_name%22:%22%22,%22album_name%22:%22%E6%BC%AB%E7%94%BB%E5%88%86%E4%BA%AB%20-%20%E7%BB%B4%E4%BA%AE%22,%22audio_url%22:%22http:\/\/image.kaolafm.net\/mz\/filmchipsmp3_32\/201605\/7781acb7-c384-4900-93ed-599afd00f34f.mp3?appid=qenyx9107&deviceid=100000038549332&audioid=1000002495632%22,%22img_url%22:%22\/mz\/images\/201605\/89036cef-4798-47cc-82c6-4ad131244ab6\/default.png%22,%22audio_source%22:%22kaila%22,%22audio_type%22:%22music%22,%22begin_time%22:%22%22},{%22end_time%22:%22%22,%22singer_name%22:%22%E6%BC%AB%E7%94%BB%E5%88%86%E4%BA%AB%E7%AC%AC2%E6%9C%9F(%E5%A6%96%E7%A5%9E%E8%AE%B0)%22,%22id%22:%221000002509863%22,%22category_name%22:%22%22,%22album_name%22:%22%E6%BC%AB%E7%94%BB%E5%88%86%E4%BA%AB%20-%20%E7%BB%B4%E4%BA%AE%22,%22audio_url%22:%22http:\/\/image.kaolafm.net\/mz\/filmchipsmp3_32\/201605\/12100ef3-0d5f-4bf0-a71f-e27dd0e8384c.mp3?appid=qenyx9107&deviceid=100000038549332&audioid=1000002509863%22,%22img_url%22:%22\/mz\/images\/201605\/89036cef-4798-47cc-82c6-4ad131244ab6\/default.png%22,%22audio_source%22:%22kaila%22,%22audio_type%22:%22music%22,%22begin_time%22:%22%22},{%22end_time%22:%22%22,%22singer_name%22:%22%E6%BC%AB%E7%94%BB%E5%88%86%E4%BA%AB%20-%20%E7%AC%AC3%E6%9C%9F%EF%BC%88%E4%BB%99%E4%BE%A0%E4%B8%96%E7%95%8C%EF%BC%89%22,%22id%22:%221000002522311%22,%22category_name%22:%22%22,%22album_name%22:%22%E6%BC%AB%E7%94%BB%E5%88%86%E4%BA%AB%20-%20%E7%BB%B4%E4%BA%AE%22,%22audio_url%22:%22http:\/\/image.kaolafm.net\/mz\/filmchipsmp3_32\/201606\/156191b0-d508-4d7f-9031-352aabf02420.mp3?appid=qenyx9107&deviceid=100000038549332&audioid=1000002522311%22,%22img_url%22:%22\/mz\/images\/201605\/89036cef-4798-47cc-82c6-4ad131244ab6\/default.png%22,%22audio_source%22:%22kaila%22,%22audio_type%22:%22music%22,%22begin_time%22:%22%22}],%22action_type%22:%22startplay%22,%22audio_index%22:0}
+
+{
+    "action": "fm_audio",
+    "audios": [
+        {
+            "end_time": "",
+            "singer_name": "漫画分享 第一期分享 - 斗破苍穹漫画",
+            "id": "1000002495632",
+            "category_name": "",
+            "album_name": "漫画分享 - 维亮",
+            "audio_url": "http://image.kaolafm.net/mz/filmchipsmp3_32/201605/7781acb7-c384-4900-93ed-599afd00f34f.mp3?appid=qenyx9107&deviceid=100000038549332&audioid=1000002495632",
+            "img_url": "/mz/images/201605/89036cef-4798-47cc-82c6-4ad131244ab6/default.png",
+            "audio_source": "kaola",
+            "audio_type": "music",
+            "begin_time": ""
+        },
+        {
+            "end_time": "",
+            "singer_name": "漫画分享第2期(妖神记)",
+            "id": "1000002509863",
+            "category_name": "",
+            "album_name": "漫画分享 - 维亮",
+            "audio_url": "
+			http://image.kaolafm.net/mz/filmchipsmp3_32/201605/12100ef3-0d5f-4bf0-a71f-e27dd0e8384c.mp3?appid=qenyx9107&deviceid=100000038549332&audioid=1000002509863",
+            "img_url": "/mz/images/201605/89036cef-4798-47cc-82c6-4ad131244ab6/default.png",
+            "audio_source": "kaola",
+            "audio_type": "music",
+            "begin_time": ""
+        },
+        {
+            "end_time": "",
+            "singer_name": "漫画分享 - 第3期（仙侠世界）",
+            "id": "1000002522311",
+            "category_name": "",
+            "album_name": "漫画分享 - 维亮",
+            "audio_url": "http://image.kaolafm.net/mz/filmchipsmp3_32/201606/156191b0-d508-4d7f-9031-352aabf02420.mp3?appid=qenyx9107&deviceid=100000038549332&audioid=1000002522311",
+            "img_url": "/mz/images/201605/89036cef-4798-47cc-82c6-4ad131244ab6/default.png",
+            "audio_source": "kaola",
+            "audio_type": "music",
+            "begin_time": ""
+        }
+    ],
+    "action_type": "startplay",
+    "audio_index": 0
+}
+
+
+
+		MediaPlayerManager.getInstance().startAndBindService();
+		new Handler().postDelayed(new Runnable() {
+			@Override
+			public void run() {
+				INFO_MUSIC_LIST info = new INFO_MUSIC_LIST();
+				info.audio_index = 0;
+				info.audios = new ArrayList<INFO_MUSIC_DATA>();
+				INFO_MUSIC_DATA data =new INFO_MUSIC_DATA();
+//				data.audio_url = "http://image2.kaolafm.net/filmchipsmp3_32/201302/269df0f7-454e-42e4-87ce-97d640142c7f.MP3?appid=qenyx9107&deviceid=100000038835850&audioid=1000000881435";
+				data.audio_url = "/mnt/usb/sda1/aa.mp3";
+				data.audio_url = "http://image.kaolafm.net/mz/filmchipsmp3_32/201605/12100ef3-0d5f-4bf0-a71f-e27dd0e8384c.mp3?appid=qenyx9107&deviceid=100000038549332&audioid=1000002509863";
+				info.audios.add(data);
+				MediaPlayerManager.getInstance().play(info);
+				finish();
+			}
+		}, 100);

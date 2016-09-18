@@ -1,0 +1,256 @@
+
+//sunfeng modify @20160106
+
+OTA7_171_function:
+1，代码重构
+
+--reviewed by 杨俊
+OTA11_226_function:
+1，修复Bug 46688 
+--reviewed by 杨俊
+
+OTA13_232_function:
+1，增加应用商店新产品上架消息接口
+--reviewed by 杨俊
+
+//sunfeng modify @20160107
+
+OTA7_171_function:
+1,桌面推荐位，应用商店图片2H定时刷新。
+2,在没有桌面缓存、没有网络状态，开机，正常浏览再连上网络，应用商店图片没有更新，还是显示apk默认ICON图片。
+3,清零之前记录 置顶+自动配置 本地应用列表。
+
+--reviewed by 杨俊
+
+
+
+
+//sunfeng modify @20160112
+OTA7_146_function:
+1,代码分离， Activity+View+PlayManager 模式
+2,解决bug 5223  5895  6322  13518
+3,加4K图片浏览
+
+--reviewed by 杨俊
+
+
+
+//sunfeng modify @20160114
+OTA7_171_function:
+1, 修改bug 21680
+2, 去掉 add apk 广播刷新，
+3, 修改检测之前应用列表是否有效（应用列表小于6都为无效，需要重新获取数据）---> 检测之前应用列表&&是否有云端数据
+
+--reviewed by 杨俊
+
+
+
+
+//sunfeng modify @20160119
+OTA7_177_function:
+1, 修改bug 12815
+
+--reviewed by 杨俊
+
+OTA7_152_function:
+1, 修改4K 文件显示范围 大于1920X1080 
+2, 添加显示4K图片预加载功能
+U盘预加载功能快， SD rom 4K预加载慢（解码失败） ， smb 文件解码 与网络传输有关
+--reviewed by 杨俊
+
+
+
+OTA7_152_function:
+1, Bug 23030  
+2, bug22909
+--reviewed by 杨俊
+
+
+
+OTA7_152_function:
+1, Bug 23186   
+2, 添加4K图片软解码失败 ，采用Bitmap 方法显示图片
+--reviewed by 苏永奇
+
+OTA8_100_function:  commSDK
+1, 添加日志上传字段
+2, bug 21890
+--reviewed by 杨俊
+
+OTA8_184_function: Launcher
+1, bug 23026	
+2, bug 22353
+3, bug 12815
+--reviewed by 杨俊
+
+
+OTA8_195_function: Vod
+1, 长视频专题添加
+--reviewed by 杨俊
+
+OTA8_154_function: Account
+1,帐号中心， 观看历史 收藏追剧，启动优化
+2,Bug 20036 
+3,背景图片回收
+--reviewed by 杨俊
+
+OTA8_184_function: Launcher
+1, 追剧收藏，保存更新时间戳，获取更新数据
+--reviewed by 杨俊
+
+
+OTA8_157_function:
+1, bug 25198
+2, smb 浏览4K图片，退出smb,进程重启，Bitmap 被引用了
+--reviewed by 杨俊
+
+
+
+OTA8_100_function:
+1, Bug 23152  
+--reviewed by 杨俊
+
+OTA8_186_function:
+1, Bug 23152  
+--reviewed by 杨俊
+
+
+OTA8_120_function:
+1, Bug 23273 
+2, Bug 23260 
+--reviewed by 杨俊
+
+
+OTA8_157_function:
+1, Bug 26467  
+--reviewed by 杨俊
+
+OTA8_122_function:
+1, Bug 25179	  
+--reviewed by 杨俊
+
+OTA8_199_function:
+1, Bug 27079	  
+--reviewed by 杨俊
+
+
+OTA8_188_function:
+1, Bug 24511		
+2, Bug 20062 		    
+--reviewed by 杨俊 苏永其
+
+OTA8_189_function:
+1, Bug 27415	  
+2, Bug 25318	  
+1, Bug 27350 	  
+--reviewed by 杨俊
+
+OTA8_161_function:
+1,Bug 27813 	  
+--reviewed by 杨俊
+
+
+OTA8_201_function:
+1,Bug 25172 	  
+--reviewed by 杨俊
+
+OTA8_162_function:
+1,Bug 28094 
+2,Bug 27855 	  	  
+--reviewed by 杨俊
+
+OTA8_191_function:
+1,Bug 26882 
+2,Bug 24879 
+3,Bug 22012 	  	  
+--reviewed by 杨俊
+
+
+OTA_100_function:
+1, 添加适配50吋电视 	  	  
+--reviewed by 杨俊
+
+
+OTA_124_function:
+1,  Bug 29114 	
+2,  Bug 17890	  
+3,  Bug 17845 	    	  
+--reviewed by 杨俊
+OTA_124_function:
+1,  Bug 29882 	
+2,  Bug 17842 	    	  
+--reviewed by 杨俊
+
+
+OTA_192_function:
+1, 修改桌面今天推荐副标题长度	    	  
+--reviewed by 杨俊
+
+
+OTA_164_function:
+1, 本地播放4K图片优化
+2，Bug 28093  Bug 25217	Bug 30778	    	  
+--reviewed by 杨俊
+
+OTA9_203_function:
+1.    	  Bug 29854
+--reviewed by 杨俊
+
+
+OTA9_101_function:
+1.  commSDK 拆分
+--reviewed by 杨俊
+
+
+OTA_195_function:
+1, branch 分支同步 到w43f分支上	    	  
+--reviewed by 杨俊
+
+
+
+OTA9_207_function:
+1, Bug 5820   Bug 5831
+--reviewed by 杨俊
+
+
+OTA9_168_function:
+1,  Bug 32764   Bug 32749
+--reviewed by 杨俊
+
+
+OTA9_197_function:
+1, Bug 31458  Bug 29556 Bug 31456  Bug 32417 
+--reviewed by 杨俊
+
+OTA10_201_function:
+1, Bug 30111
+--reviewed by 杨俊
+
+OTA10_210_function:
+1, Bug 5723  23833	
+--reviewed by 杨俊
+
+OTA10_100_function:
+1, 添加65寸WSEP型号
+2, 添加MEMC属性
+   50A 50J  55曲面 55pro 65寸	
+--reviewed by 苏永其
+
+OTA10_131_function:
+1,  android:versionCode+1
+
+
+
+
+OTA10_204_function:
+vod kids 二级菜单跳转 linkValue
+--reviewed by suyongqi
+
+OTA11_100_function:
+1，音乐2.0电台收藏数据库回调
+2，优化获取对象方法
+--reviewed by 杨俊
+
+OTA10_210_function:
+1, Bug 5723  23833	
+--reviewed by 杨俊
